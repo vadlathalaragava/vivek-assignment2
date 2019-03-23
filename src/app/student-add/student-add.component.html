@@ -1,0 +1,69 @@
+<div class="ui    doubling stackable grid container" style="margin-top: 1rem;">
+
+
+    <div class="ui purple three item inverted menu">
+      <a href="student" class="item">
+        Home
+      </a>
+      <a href="student-list" class="item">
+        Students List
+      </a>
+      <a href="student-add" class="item">
+          Student Add
+      </a>
+    
+    </div>  
+    
+    
+    
+  
+  <form class="ui form" >
+    <h4 class="ui dividing header">Shipping Information</h4>
+    <div class="field">
+      <label>Roll Number</label>
+        <div class="field">
+          <input type="text" name="rn"  [(ngModel)]="student.rn" readonly >
+        </div>
+    </div>
+    <div class="field">
+        <label>First Name</label>
+          <div class="field">
+            <input type="text" name="firstName"  [(ngModel)]="student.firstName" placeholder="First Name">
+          </div>
+      </div>
+    <div class="field">
+      <label>Last Name</label>
+        <div class="field">
+          <input type="text"  name="lastName"   [(ngModel)]="student.lastName" placeholder="Last Name">
+        </div>
+    </div>
+    <div class="field">
+        <label>Birth date</label>
+          <div class="field">
+            <input type="date" name="birthdate" [(ngModel)]="student.birthdate" placeholder="Birth date">
+          </div>
+      </div>
+      <div class="field">
+          <label>Parent Name</label>
+            <div class="field">
+              <input type="text" name="parentName" [(ngModel)]="student.parentName" placeholder="Parent Name">
+            </div>
+        </div>
+        <div class="field">
+            <label>Parent Phone</label>
+              <div class="field">
+                <input type="text" name="parentPhone" [(ngModel)]="student.parentPhone" placeholder="Parent Phone">
+              </div>
+          </div>
+  
+          <div class="field">
+              <label>Address</label>
+                <div class="field">
+                  <input type="text" name="address" [(ngModel)]="student.address" placeholder="Address">
+                </div>
+            </div> 
+      
+    <div class="ui button" tabindex="0" (click)="studentAdd(student)">Add Student</div>
+  
+  </form>
+  </div>

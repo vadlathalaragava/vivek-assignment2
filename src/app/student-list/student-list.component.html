@@ -1,0 +1,68 @@
+<div class="ui  doubling stackable grid container" style="margin-top: 1rem;">
+
+
+<div class="ui purple three item inverted menu">
+  <a href="student" class="item">
+    Home
+  </a>
+  <a href="student-list" class="item">
+    Students List
+  </a>
+  <a href="student-add" class="item">
+    Student Add 
+  </a>
+
+</div>
+
+
+
+<table class="ui compact celled definition table">
+  <thead class="full-width">
+    <tr>
+      <th>Roll No</th>
+      <th>Birth Date</th>
+      <th>First Name</th>
+      <th>Last Name </th>
+      <th>Parent Name</th>
+      <th>Parent Phone</th>
+      <th>Address</th>
+      <th> </th>
+      <th> </th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let s of student">
+      <td>{{s.rn}}</td>
+      <td>{{s.birthdate}}</td>
+      <td>{{s.firstName}}</td>
+      <td>{{s.lastName}}</td>
+      <td>{{s.parentName}}</td>
+      <td>{{s.parentPhone}}</td>
+      <td>{{s.address}}</td>
+      <td><button type="button" class="ui inverted orange button" (click)="deleteStudent(s)">Delete</button> </td>
+      <td><button type="button" class="ui inverted orange button" (click)="editStudent(s.rn)">Edit</button> </td>
+    </tr>
+  </tbody>
+  <tfoot class="full-width">
+    <tr>
+      <th></th>
+      <th colspan="4" >
+        <div class="ui right floated small primary labeled icon button" (click)="getStudentAdd()">
+          <i class="user icon"></i> Add User
+        </div>
+
+        <div class="ui left floated small orange labeled icon button" (click)="deleteAll()">
+          <i class="users icon"></i> Delete All
+        </div>
+        
+      </th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </tfoot>
+</table>
+
+</div>
